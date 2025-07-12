@@ -1,0 +1,26 @@
+[
+  {
+    "pool_index": 2,
+    "pool_name": "WoolyPooly",
+    "job_id": "0000220a",
+    "header_hash": "af58abb4aa85a201effab664a164644311c0ad076c376223ead02c7b2a3744ae",
+    "target": "0000000500000000000000000000000000000000000000000000000000000000",
+    "ntime": "1b010a42"
+  },
+  {
+    "pool_index": 1,
+    "pool_name": "Ravenminer",
+    "job_id": "4c82",
+    "header_hash": "5edcd56f423848846da02387d80458304b56446d33fe5b39a73661a8cbf7c8cd",
+    "target": "00000004fb000000000000000000000000000000000000000000000000000000",
+    "ntime": "1b010a42"
+  },
+  {
+    "pool_index": 0,
+    "pool_name": "2Miners",
+    "job_id": "4599e",
+    "header_hash": "8230410f752939be6f556d966f5b92297b661abc029fb71d373dced9823c3d83",
+    "target": "00000000ffff0000000000000000000000000000000000000000000000000000",
+    "ntime": "1b010a42"
+  }
+]

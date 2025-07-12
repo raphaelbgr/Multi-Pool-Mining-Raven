@@ -1,0 +1,58 @@
+import socket
+import json
+import time
+
+def load_config():
+    with open("config.json") as f:
+        return json.load(f)
+
+def connect_and_debug(pool):
+    name, host, port = pool["name"], pool["host"], pool["port"]
+    print(f"\n🔌 Conectando em {name} ({host}:{port})...")
+
+    try:
+        sock = socket.create_connection((host, port), timeout=10)
+
+        # Step 1: subscribe
+        sock.sendall(json.dumps({
+            "id": 1,
+            "method": "mining.subscribe",
+            "params": []
+        }).encode() + b"\n")
+        sub_resp = sock.recv(4096)
+        print(f"[subscribe] {sub_resp.decode(errors='ignore').strip()}")
+
+        # Step 2: authorize
+        sock.sendall(json.dumps({
+            "id": 2,
+            "method": "mining.authorize",
+            "params": [pool['user'], pool['password']]
+        }).encode() + b"\n")
+        auth_resp = sock.recv(4096)
+        print(f"[authorize] {auth_resp.decode(errors='ignore').strip()}")
+
+        print(f"⏳ Aguardando mensagens da pool {name}... Pressione Ctrl+C para sair.")
+
+        while True:
+            raw_data = sock.recv(4096).decode(errors="ignore")
+            for line in raw_data.strip().splitlines():
+                print("\n🔹 [RAW] " + line)
+                try:
+                    msg = json.loads(line)
+                    print("[📦 JSON]")
+                    print(json.dumps(msg, indent=2))
+
+                    if msg.get("method") == "mining.notify":
+                        params = msg.get("params", [])
+                        print(f"[🧪 PARAMS] type={type(params)}, len={len(params)}\n{params}")
+                except Exception as e:
+                    print(f"❌ Erro ao parsear JSON: {e}")
+
+    except Exception as e:
+        print(f"❌ Falha ao conectar ou comunicar com {name}: {e}")
+
+if __name__ == "__main__":
+    config = load_config()
+    for pool in config.get("pools", []):
+        connect_and_debug(pool)
+        time.sleep(1)
