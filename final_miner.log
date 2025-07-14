@@ -1,0 +1,377 @@
+2025-07-13 19:52:52,930 - INFO - Loaded config_fixed.json
+2025-07-13 19:52:52,930 - INFO - Configured pools: 5
+2025-07-13 19:52:52,930 - INFO -   - 2Miners: rvn.2miners.com:6060
+2025-07-13 19:52:52,930 - INFO -   - Ravenminer: stratum.ravenminer.com:3838
+2025-07-13 19:52:52,930 - INFO -   - WoolyPooly: pool.br.woolypooly.com:55555
+2025-07-13 19:52:52,931 - INFO -   - HeroMiners: br.ravencoin.herominers.com:1140
+2025-07-13 19:52:52,931 - INFO -   - Nanopool: rvn-us-east1.nanopool.org:10400
+2025-07-13 19:52:52,931 - INFO - Starting Final Working Miner
+2025-07-13 19:52:52,931 - INFO - Started at: 2025-07-13 19:52:52.931181
+2025-07-13 19:52:52,931 - INFO - All fixes applied:
+2025-07-13 19:52:52,931 - INFO - - Fixed nonce format issues
+2025-07-13 19:52:52,931 - INFO - - Fixed share submission format
+2025-07-13 19:52:52,931 - INFO - - Fixed address registration
+2025-07-13 19:52:52,931 - INFO - - Pool-specific protocol handling
+2025-07-13 19:52:52,931 - INFO - Cycle #1 (Nonce: 0)
+2025-07-13 19:52:52,931 - INFO - Fetching jobs...
+2025-07-13 19:53:10,497 - INFO - Loaded 3/5 active pools
+2025-07-13 19:53:10,498 - INFO -   Pool 2 (WoolyPooly): Job 00003bd0
+2025-07-13 19:53:10,498 - INFO -   Pool 1 (Ravenminer): Job 5637
+2025-07-13 19:53:10,498 - INFO -   Pool 4 (Nanopool): Job 88899
+2025-07-13 19:53:10,498 - INFO - Starting miner...
+2025-07-13 19:53:10,662 - INFO - Processing results with fixed share submission...
+2025-07-13 19:53:10,662 - INFO - No valid shares found
+2025-07-13 19:53:10,662 - INFO - Next nonce: 4194304
+2025-07-13 19:53:10,662 - INFO - Total shares found: 0
+2025-07-13 19:53:10,662 - INFO - Accepted shares: 0
+2025-07-13 19:53:11,663 - INFO - Cycle #2 (Nonce: 4194304)
+2025-07-13 19:53:11,663 - INFO - Fetching jobs...
+2025-07-13 19:53:36,485 - INFO - Loaded 5/5 active pools
+2025-07-13 19:53:36,485 - INFO -   Pool 2 (WoolyPooly): Job 00003bd1
+2025-07-13 19:53:36,485 - INFO -   Pool 1 (Ravenminer): Job 5638
+2025-07-13 19:53:36,485 - INFO -   Pool 0 (2Miners): Job 46582
+2025-07-13 19:53:36,486 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:53:36,486 - INFO -   Pool 4 (Nanopool): Job 8889b
+2025-07-13 19:53:36,486 - INFO - Starting miner...
+2025-07-13 19:53:36,628 - INFO - Processing results with fixed share submission...
+2025-07-13 19:53:36,628 - INFO - No valid shares found
+2025-07-13 19:53:36,628 - INFO - Next nonce: 8388608
+2025-07-13 19:53:36,628 - INFO - Total shares found: 0
+2025-07-13 19:53:36,628 - INFO - Accepted shares: 0
+2025-07-13 19:53:37,629 - INFO - Cycle #3 (Nonce: 8388608)
+2025-07-13 19:53:37,629 - INFO - Fetching jobs...
+2025-07-13 19:54:03,905 - INFO - Loaded 4/5 active pools
+2025-07-13 19:54:03,905 - INFO -   Pool 2 (WoolyPooly): Job 00003bd3
+2025-07-13 19:54:03,906 - INFO -   Pool 1 (Ravenminer): Job 570c
+2025-07-13 19:54:03,906 - INFO -   Pool 0 (2Miners): Job 46583
+2025-07-13 19:54:03,906 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:54:03,906 - INFO - Starting miner...
+2025-07-13 19:54:04,067 - INFO - Processing results with fixed share submission...
+2025-07-13 19:54:04,067 - INFO - No valid shares found
+2025-07-13 19:54:04,067 - INFO - Next nonce: 12582912
+2025-07-13 19:54:04,067 - INFO - Total shares found: 0
+2025-07-13 19:54:04,068 - INFO - Accepted shares: 0
+2025-07-13 19:54:05,068 - INFO - Cycle #4 (Nonce: 12582912)
+2025-07-13 19:54:05,069 - INFO - Fetching jobs...
+2025-07-13 19:54:30,135 - INFO - Loaded 4/5 active pools
+2025-07-13 19:54:30,135 - INFO -   Pool 2 (WoolyPooly): Job 00003bd4
+2025-07-13 19:54:30,136 - INFO -   Pool 1 (Ravenminer): Job 5704
+2025-07-13 19:54:30,136 - INFO -   Pool 0 (2Miners): Job 46584
+2025-07-13 19:54:30,136 - INFO -   Pool 3 (HeroMiners): Job 1
+2025-07-13 19:54:30,136 - INFO - Starting miner...
+2025-07-13 19:54:30,266 - INFO - Processing results with fixed share submission...
+2025-07-13 19:54:30,266 - INFO - No valid shares found
+2025-07-13 19:54:30,267 - INFO - Next nonce: 16777216
+2025-07-13 19:54:30,267 - INFO - Total shares found: 0
+2025-07-13 19:54:30,267 - INFO - Accepted shares: 0
+2025-07-13 19:54:31,267 - INFO - Cycle #5 (Nonce: 16777216)
+2025-07-13 19:54:31,267 - INFO - Fetching jobs...
+2025-07-13 19:54:46,681 - INFO - Loaded 4/5 active pools
+2025-07-13 19:54:46,681 - INFO -   Pool 1 (Ravenminer): Job 5635
+2025-07-13 19:54:46,681 - INFO -   Pool 0 (2Miners): Job 46585
+2025-07-13 19:54:46,681 - INFO -   Pool 2 (WoolyPooly): Job 00003bd6
+2025-07-13 19:54:46,681 - INFO -   Pool 4 (Nanopool): Job 3a1da
+2025-07-13 19:54:46,681 - INFO - Starting miner...
+2025-07-13 19:54:46,810 - INFO - Processing results with fixed share submission...
+2025-07-13 19:54:46,810 - INFO - No valid shares found
+2025-07-13 19:54:46,810 - INFO - Next nonce: 20971520
+2025-07-13 19:54:46,810 - INFO - Total shares found: 0
+2025-07-13 19:54:46,810 - INFO - Accepted shares: 0
+2025-07-13 19:54:47,811 - INFO - Cycle #6 (Nonce: 20971520)
+2025-07-13 19:54:47,811 - INFO - Fetching jobs...
+2025-07-13 19:54:58,366 - INFO - Loaded 3/5 active pools
+2025-07-13 19:54:58,366 - INFO -   Pool 1 (Ravenminer): Job 563b
+2025-07-13 19:54:58,366 - INFO -   Pool 0 (2Miners): Job 46585
+2025-07-13 19:54:58,366 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:54:58,367 - INFO - Starting miner...
+2025-07-13 19:54:58,515 - INFO - Processing results with fixed share submission...
+2025-07-13 19:54:58,515 - INFO - No valid shares found
+2025-07-13 19:54:58,515 - INFO - Next nonce: 25165824
+2025-07-13 19:54:58,515 - INFO - Total shares found: 0
+2025-07-13 19:54:58,515 - INFO - Accepted shares: 0
+2025-07-13 19:54:59,516 - INFO - Cycle #7 (Nonce: 25165824)
+2025-07-13 19:54:59,516 - INFO - Fetching jobs...
+2025-07-13 19:55:08,896 - INFO - Loaded 5/5 active pools
+2025-07-13 19:55:08,896 - INFO -   Pool 2 (WoolyPooly): Job 00003bd6
+2025-07-13 19:55:08,896 - INFO -   Pool 1 (Ravenminer): Job 5639
+2025-07-13 19:55:08,896 - INFO -   Pool 0 (2Miners): Job 46585
+2025-07-13 19:55:08,896 - INFO -   Pool 3 (HeroMiners): Job 1
+2025-07-13 19:55:08,897 - INFO -   Pool 4 (Nanopool): Job 3a1db
+2025-07-13 19:55:08,897 - INFO - Starting miner...
+2025-07-13 19:55:09,067 - INFO - Processing results with fixed share submission...
+2025-07-13 19:55:09,068 - INFO - Found valid nonce: pool 0, nonce 25193600
+2025-07-13 19:55:09,068 - INFO - Submitting share to 2Miners...
+2025-07-13 19:55:09,742 - WARNING - Share rejected by 2Miners
+2025-07-13 19:55:09,743 - INFO - No valid shares found
+2025-07-13 19:55:09,743 - INFO - Next nonce: 29360128
+2025-07-13 19:55:09,743 - INFO - Total shares found: 1
+2025-07-13 19:55:09,743 - INFO - Accepted shares: 0
+2025-07-13 19:55:10,743 - INFO - Cycle #8 (Nonce: 29360128)
+2025-07-13 19:55:10,744 - INFO - Fetching jobs...
+2025-07-13 19:55:35,100 - INFO - Loaded 4/5 active pools
+2025-07-13 19:55:35,100 - INFO -   Pool 2 (WoolyPooly): Job 00003bd7
+2025-07-13 19:55:35,100 - INFO -   Pool 1 (Ravenminer): Job 570f
+2025-07-13 19:55:35,100 - INFO -   Pool 0 (2Miners): Job 46586
+2025-07-13 19:55:35,100 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:55:35,101 - INFO - Starting miner...
+2025-07-13 19:55:35,251 - INFO - Processing results with fixed share submission...
+2025-07-13 19:55:35,252 - INFO - No valid shares found
+2025-07-13 19:55:35,252 - INFO - Next nonce: 33554432
+2025-07-13 19:55:35,252 - INFO - Total shares found: 1
+2025-07-13 19:55:35,252 - INFO - Accepted shares: 0
+2025-07-13 19:55:36,252 - INFO - Cycle #9 (Nonce: 33554432)
+2025-07-13 19:55:36,253 - INFO - Fetching jobs...
+2025-07-13 19:56:05,739 - INFO - Loaded 4/5 active pools
+2025-07-13 19:56:05,740 - INFO -   Pool 2 (WoolyPooly): Job 00003bd7
+2025-07-13 19:56:05,740 - INFO -   Pool 1 (Ravenminer): Job 570f
+2025-07-13 19:56:05,740 - INFO -   Pool 0 (2Miners): Job 46586
+2025-07-13 19:56:05,740 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:56:05,740 - INFO - Starting miner...
+2025-07-13 19:56:05,900 - INFO - Processing results with fixed share submission...
+2025-07-13 19:56:05,901 - INFO - Found valid nonce: pool 0, nonce 33592960
+2025-07-13 19:56:05,901 - INFO - Submitting share to 2Miners...
+2025-07-13 19:56:06,582 - WARNING - Share rejected by 2Miners
+2025-07-13 19:56:06,583 - INFO - No valid shares found
+2025-07-13 19:56:06,583 - INFO - Next nonce: 37748736
+2025-07-13 19:56:06,583 - INFO - Total shares found: 2
+2025-07-13 19:56:06,583 - INFO - Accepted shares: 0
+2025-07-13 19:56:07,583 - INFO - Cycle #10 (Nonce: 37748736)
+2025-07-13 19:56:07,584 - INFO - Fetching jobs...
+2025-07-13 19:56:32,668 - INFO - Loaded 5/5 active pools
+2025-07-13 19:56:32,668 - INFO -   Pool 1 (Ravenminer): Job 5731
+2025-07-13 19:56:32,668 - INFO -   Pool 0 (2Miners): Job 46586
+2025-07-13 19:56:32,668 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:56:32,668 - INFO -   Pool 2 (WoolyPooly): Job 00003bd9
+2025-07-13 19:56:32,669 - INFO -   Pool 4 (Nanopool): Job 3a1df
+2025-07-13 19:56:32,669 - INFO - Starting miner...
+2025-07-13 19:56:32,815 - INFO - Processing results with fixed share submission...
+2025-07-13 19:56:32,816 - INFO - Found valid nonce: pool 0, nonce 37776544
+2025-07-13 19:56:32,816 - INFO - Submitting share to 2Miners...
+2025-07-13 19:56:33,476 - WARNING - Share rejected by 2Miners
+2025-07-13 19:56:33,476 - INFO - No valid shares found
+2025-07-13 19:56:33,476 - INFO - Next nonce: 41943040
+2025-07-13 19:56:33,476 - INFO - Total shares found: 3
+2025-07-13 19:56:33,476 - INFO - Accepted shares: 0
+2025-07-13 19:56:34,477 - INFO - Cycle #11 (Nonce: 41943040)
+2025-07-13 19:56:34,477 - INFO - Fetching jobs...
+2025-07-13 19:56:45,069 - INFO - Loaded 4/5 active pools
+2025-07-13 19:56:45,069 - INFO -   Pool 2 (WoolyPooly): Job 00003bd9
+2025-07-13 19:56:45,069 - INFO -   Pool 1 (Ravenminer): Job 5731
+2025-07-13 19:56:45,070 - INFO -   Pool 0 (2Miners): Job 46586
+2025-07-13 19:56:45,070 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:56:45,070 - INFO - Starting miner...
+2025-07-13 19:56:45,203 - INFO - Processing results with fixed share submission...
+2025-07-13 19:56:45,203 - INFO - No valid shares found
+2025-07-13 19:56:45,203 - INFO - Next nonce: 46137344
+2025-07-13 19:56:45,204 - INFO - Total shares found: 3
+2025-07-13 19:56:45,204 - INFO - Accepted shares: 0
+2025-07-13 19:56:46,204 - INFO - Cycle #12 (Nonce: 46137344)
+2025-07-13 19:56:46,205 - INFO - Fetching jobs...
+2025-07-13 19:56:56,816 - INFO - Loaded 3/5 active pools
+2025-07-13 19:56:56,816 - INFO -   Pool 1 (Ravenminer): Job 5703
+2025-07-13 19:56:56,816 - INFO -   Pool 0 (2Miners): Job 46586
+2025-07-13 19:56:56,816 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:56:56,816 - INFO - Starting miner...
+2025-07-13 19:56:56,963 - INFO - Processing results with fixed share submission...
+2025-07-13 19:56:56,963 - INFO - Found valid nonce: pool 0, nonce 46176992
+2025-07-13 19:56:56,963 - INFO - Submitting share to 2Miners...
+2025-07-13 19:56:57,632 - WARNING - Share rejected by 2Miners
+2025-07-13 19:56:57,632 - INFO - No valid shares found
+2025-07-13 19:56:57,632 - INFO - Next nonce: 50331648
+2025-07-13 19:56:57,632 - INFO - Total shares found: 4
+2025-07-13 19:56:57,632 - INFO - Accepted shares: 0
+2025-07-13 19:56:58,633 - INFO - Cycle #13 (Nonce: 50331648)
+2025-07-13 19:56:58,633 - INFO - Fetching jobs...
+2025-07-13 19:57:02,885 - INFO - Loaded 5/5 active pools
+2025-07-13 19:57:02,885 - INFO -   Pool 1 (Ravenminer): Job 5742
+2025-07-13 19:57:02,885 - INFO -   Pool 0 (2Miners): Job 46587
+2025-07-13 19:57:02,885 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:57:02,886 - INFO -   Pool 2 (WoolyPooly): Job 00003bdc
+2025-07-13 19:57:02,886 - INFO -   Pool 4 (Nanopool): Job 3a1e1
+2025-07-13 19:57:02,886 - INFO - Starting miner...
+2025-07-13 19:57:03,016 - INFO - Processing results with fixed share submission...
+2025-07-13 19:57:03,017 - INFO - Found valid nonce: pool 0, nonce 50371232
+2025-07-13 19:57:03,017 - INFO - Submitting share to 2Miners...
+2025-07-13 19:57:03,692 - WARNING - Share rejected by 2Miners
+2025-07-13 19:57:03,693 - INFO - No valid shares found
+2025-07-13 19:57:03,693 - INFO - Next nonce: 54525952
+2025-07-13 19:57:03,693 - INFO - Total shares found: 5
+2025-07-13 19:57:03,693 - INFO - Accepted shares: 0
+2025-07-13 19:57:04,694 - INFO - Cycle #14 (Nonce: 54525952)
+2025-07-13 19:57:04,694 - INFO - Fetching jobs...
+2025-07-13 19:57:16,281 - INFO - Loaded 2/5 active pools
+2025-07-13 19:57:16,281 - INFO -   Pool 1 (Ravenminer): Job 5741
+2025-07-13 19:57:16,281 - INFO -   Pool 0 (2Miners): Job 4658c
+2025-07-13 19:57:16,281 - INFO - Starting miner...
+2025-07-13 19:57:16,423 - INFO - Processing results with fixed share submission...
+2025-07-13 19:57:16,423 - INFO - No valid shares found
+2025-07-13 19:57:16,423 - INFO - Next nonce: 58720256
+2025-07-13 19:57:16,423 - INFO - Total shares found: 5
+2025-07-13 19:57:16,423 - INFO - Accepted shares: 0
+2025-07-13 19:57:17,423 - INFO - Cycle #15 (Nonce: 58720256)
+2025-07-13 19:57:17,424 - INFO - Fetching jobs...
+2025-07-13 19:57:28,008 - INFO - Loaded 3/5 active pools
+2025-07-13 19:57:28,009 - INFO -   Pool 1 (Ravenminer): Job 56f8
+2025-07-13 19:57:28,009 - INFO -   Pool 0 (2Miners): Job 4658c
+2025-07-13 19:57:28,009 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:57:28,009 - INFO - Starting miner...
+2025-07-13 19:57:28,182 - INFO - Processing results with fixed share submission...
+2025-07-13 19:57:28,182 - INFO - No valid shares found
+2025-07-13 19:57:28,182 - INFO - Next nonce: 62914560
+2025-07-13 19:57:28,182 - INFO - Total shares found: 5
+2025-07-13 19:57:28,182 - INFO - Accepted shares: 0
+2025-07-13 19:57:29,183 - INFO - Cycle #16 (Nonce: 62914560)
+2025-07-13 19:57:29,183 - INFO - Fetching jobs...
+2025-07-13 19:57:32,900 - INFO - Loaded 5/5 active pools
+2025-07-13 19:57:32,900 - INFO -   Pool 1 (Ravenminer): Job 5703
+2025-07-13 19:57:32,900 - INFO -   Pool 0 (2Miners): Job 4658c
+2025-07-13 19:57:32,901 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:57:32,901 - INFO -   Pool 2 (WoolyPooly): Job 00003bdd
+2025-07-13 19:57:32,901 - INFO -   Pool 4 (Nanopool): Job 3a1e2
+2025-07-13 19:57:32,901 - INFO - Starting miner...
+2025-07-13 19:57:33,064 - INFO - Processing results with fixed share submission...
+2025-07-13 19:57:33,064 - INFO - No valid shares found
+2025-07-13 19:57:33,064 - INFO - Next nonce: 67108864
+2025-07-13 19:57:33,064 - INFO - Total shares found: 5
+2025-07-13 19:57:33,065 - INFO - Accepted shares: 0
+2025-07-13 19:57:34,065 - INFO - Cycle #17 (Nonce: 67108864)
+2025-07-13 19:57:34,065 - INFO - Fetching jobs...
+2025-07-13 19:57:44,670 - INFO - Loaded 4/5 active pools
+2025-07-13 19:57:44,670 - INFO -   Pool 2 (WoolyPooly): Job 00003bdd
+2025-07-13 19:57:44,670 - INFO -   Pool 1 (Ravenminer): Job 56f0
+2025-07-13 19:57:44,670 - INFO -   Pool 0 (2Miners): Job 4658c
+2025-07-13 19:57:44,670 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:57:44,670 - INFO - Starting miner...
+2025-07-13 19:57:44,819 - INFO - Processing results with fixed share submission...
+2025-07-13 19:57:44,819 - INFO - Found valid nonce: pool 0, nonce 67128992
+2025-07-13 19:57:44,819 - INFO - Submitting share to 2Miners...
+2025-07-13 19:57:45,468 - WARNING - Share rejected by 2Miners
+2025-07-13 19:57:45,468 - INFO - No valid shares found
+2025-07-13 19:57:45,468 - INFO - Next nonce: 71303168
+2025-07-13 19:57:45,468 - INFO - Total shares found: 6
+2025-07-13 19:57:45,468 - INFO - Accepted shares: 0
+2025-07-13 19:57:46,469 - INFO - Cycle #18 (Nonce: 71303168)
+2025-07-13 19:57:46,469 - INFO - Fetching jobs...
+2025-07-13 19:58:08,510 - INFO - Loaded 3/5 active pools
+2025-07-13 19:58:08,510 - INFO -   Pool 1 (Ravenminer): Job 56f4
+2025-07-13 19:58:08,510 - INFO -   Pool 0 (2Miners): Job 4658c
+2025-07-13 19:58:08,510 - INFO -   Pool 4 (Nanopool): Job 888a9
+2025-07-13 19:58:08,510 - INFO - Starting miner...
+2025-07-13 19:58:08,653 - INFO - Processing results with fixed share submission...
+2025-07-13 19:58:08,653 - INFO - Found valid nonce: pool 0, nonce 71330976
+2025-07-13 19:58:08,653 - INFO - Submitting share to 2Miners...
+2025-07-13 19:58:09,322 - WARNING - Share rejected by 2Miners
+2025-07-13 19:58:09,322 - INFO - No valid shares found
+2025-07-13 19:58:09,322 - INFO - Next nonce: 75497472
+2025-07-13 19:58:09,322 - INFO - Total shares found: 7
+2025-07-13 19:58:09,322 - INFO - Accepted shares: 0
+2025-07-13 19:58:10,323 - INFO - Cycle #19 (Nonce: 75497472)
+2025-07-13 19:58:10,323 - INFO - Fetching jobs...
+2025-07-13 19:58:20,913 - INFO - Loaded 3/5 active pools
+2025-07-13 19:58:20,914 - INFO -   Pool 1 (Ravenminer): Job 5642
+2025-07-13 19:58:20,914 - INFO -   Pool 0 (2Miners): Job 4658d
+2025-07-13 19:58:20,914 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:58:20,914 - INFO - Starting miner...
+2025-07-13 19:58:21,109 - INFO - Processing results with fixed share submission...
+2025-07-13 19:58:21,110 - INFO - No valid shares found
+2025-07-13 19:58:21,110 - INFO - Next nonce: 79691776
+2025-07-13 19:58:21,110 - INFO - Total shares found: 7
+2025-07-13 19:58:21,111 - INFO - Accepted shares: 0
+2025-07-13 19:58:22,111 - INFO - Cycle #20 (Nonce: 79691776)
+2025-07-13 19:58:22,111 - INFO - Fetching jobs...
+2025-07-13 19:58:32,694 - INFO - Loaded 3/5 active pools
+2025-07-13 19:58:32,694 - INFO -   Pool 1 (Ravenminer): Job 563a
+2025-07-13 19:58:32,695 - INFO -   Pool 0 (2Miners): Job 4658d
+2025-07-13 19:58:32,695 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:58:32,695 - INFO - Starting miner...
+2025-07-13 19:58:32,846 - INFO - Processing results with fixed share submission...
+2025-07-13 19:58:32,847 - INFO - No valid shares found
+2025-07-13 19:58:32,847 - INFO - Next nonce: 83886080
+2025-07-13 19:58:32,847 - INFO - Total shares found: 7
+2025-07-13 19:58:32,847 - INFO - Accepted shares: 0
+2025-07-13 19:58:33,847 - INFO - Cycle #21 (Nonce: 83886080)
+2025-07-13 19:58:33,847 - INFO - Fetching jobs...
+2025-07-13 19:58:42,867 - INFO - Loaded 4/5 active pools
+2025-07-13 19:58:42,868 - INFO -   Pool 1 (Ravenminer): Job 5639
+2025-07-13 19:58:42,868 - INFO -   Pool 0 (2Miners): Job 4658d
+2025-07-13 19:58:42,868 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:58:42,868 - INFO -   Pool 4 (Nanopool): Job 58f7
+2025-07-13 19:58:42,868 - INFO - Starting miner...
+2025-07-13 19:58:42,995 - INFO - Processing results with fixed share submission...
+2025-07-13 19:58:42,996 - INFO - Found valid nonce: pool 0, nonce 83926688
+2025-07-13 19:58:42,996 - INFO - Submitting share to 2Miners...
+2025-07-13 19:58:43,673 - WARNING - Share rejected by 2Miners
+2025-07-13 19:58:43,673 - INFO - No valid shares found
+2025-07-13 19:58:43,673 - INFO - Next nonce: 88080384
+2025-07-13 19:58:43,673 - INFO - Total shares found: 8
+2025-07-13 19:58:43,674 - INFO - Accepted shares: 0
+2025-07-13 19:58:44,674 - INFO - Cycle #22 (Nonce: 88080384)
+2025-07-13 19:58:44,674 - INFO - Fetching jobs...
+2025-07-13 19:58:55,263 - INFO - Loaded 4/5 active pools
+2025-07-13 19:58:55,263 - INFO -   Pool 2 (WoolyPooly): Job 00003be0
+2025-07-13 19:58:55,263 - INFO -   Pool 1 (Ravenminer): Job 5702
+2025-07-13 19:58:55,263 - INFO -   Pool 0 (2Miners): Job 4658d
+2025-07-13 19:58:55,263 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:58:55,264 - INFO - Starting miner...
+2025-07-13 19:58:55,393 - INFO - Processing results with fixed share submission...
+2025-07-13 19:58:55,393 - INFO - No valid shares found
+2025-07-13 19:58:55,393 - INFO - Next nonce: 92274688
+2025-07-13 19:58:55,394 - INFO - Total shares found: 8
+2025-07-13 19:58:55,394 - INFO - Accepted shares: 0
+2025-07-13 19:58:56,394 - INFO - Cycle #23 (Nonce: 92274688)
+2025-07-13 19:58:56,394 - INFO - Fetching jobs...
+2025-07-13 19:59:07,003 - INFO - Loaded 3/5 active pools
+2025-07-13 19:59:07,003 - INFO -   Pool 1 (Ravenminer): Job 5704
+2025-07-13 19:59:07,004 - INFO -   Pool 0 (2Miners): Job 4658d
+2025-07-13 19:59:07,004 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:59:07,004 - INFO - Starting miner...
+2025-07-13 19:59:07,154 - INFO - Processing results with fixed share submission...
+2025-07-13 19:59:07,154 - INFO - No valid shares found
+2025-07-13 19:59:07,154 - INFO - Next nonce: 96468992
+2025-07-13 19:59:07,154 - INFO - Total shares found: 8
+2025-07-13 19:59:07,154 - INFO - Accepted shares: 0
+2025-07-13 19:59:08,154 - INFO - Cycle #24 (Nonce: 96468992)
+2025-07-13 19:59:08,155 - INFO - Fetching jobs...
+2025-07-13 19:59:18,971 - INFO - Loaded 4/5 active pools
+2025-07-13 19:59:18,971 - INFO -   Pool 2 (WoolyPooly): Job 00003be0
+2025-07-13 19:59:18,971 - INFO -   Pool 1 (Ravenminer): Job 5712
+2025-07-13 19:59:18,971 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:59:18,971 - INFO -   Pool 4 (Nanopool): Job 888ac
+2025-07-13 19:59:18,972 - INFO - Starting miner...
+2025-07-13 19:59:19,117 - INFO - Processing results with fixed share submission...
+2025-07-13 19:59:19,118 - INFO - No valid shares found
+2025-07-13 19:59:19,118 - INFO - Next nonce: 100663296
+2025-07-13 19:59:19,118 - INFO - Total shares found: 8
+2025-07-13 19:59:19,118 - INFO - Accepted shares: 0
+2025-07-13 19:59:20,119 - INFO - Cycle #25 (Nonce: 100663296)
+2025-07-13 19:59:20,119 - INFO - Fetching jobs...
+2025-07-13 19:59:43,106 - INFO - Loaded 4/5 active pools
+2025-07-13 19:59:43,106 - INFO -   Pool 2 (WoolyPooly): Job 00003be1
+2025-07-13 19:59:43,106 - INFO -   Pool 1 (Ravenminer): Job 5734
+2025-07-13 19:59:43,106 - INFO -   Pool 0 (2Miners): Job 46589
+2025-07-13 19:59:43,106 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 19:59:43,106 - INFO - Starting miner...
+2025-07-13 19:59:43,254 - INFO - Processing results with fixed share submission...
+2025-07-13 19:59:43,254 - INFO - No valid shares found
+2025-07-13 19:59:43,254 - INFO - Next nonce: 104857600
+2025-07-13 19:59:43,254 - INFO - Total shares found: 8
+2025-07-13 19:59:43,254 - INFO - Accepted shares: 0
+2025-07-13 19:59:44,255 - INFO - Cycle #26 (Nonce: 104857600)
+2025-07-13 19:59:44,255 - INFO - Fetching jobs...
+2025-07-13 20:00:12,901 - INFO - Loaded 4/5 active pools
+2025-07-13 20:00:12,902 - INFO -   Pool 2 (WoolyPooly): Job 00003be2
+2025-07-13 20:00:12,902 - INFO -   Pool 1 (Ravenminer): Job 5735
+2025-07-13 20:00:12,902 - INFO -   Pool 0 (2Miners): Job 46589
+2025-07-13 20:00:12,902 - INFO -   Pool 3 (HeroMiners): Job 0
+2025-07-13 20:00:12,902 - INFO - Starting miner...
+2025-07-13 20:00:13,063 - INFO - Processing results with fixed share submission...
+2025-07-13 20:00:13,064 - INFO - Found valid nonce: pool 0, nonce 104895168
+2025-07-13 20:00:13,064 - INFO - Submitting share to 2Miners...
+2025-07-13 20:00:13,741 - WARNING - Share rejected by 2Miners
+2025-07-13 20:00:13,741 - INFO - No valid shares found
+2025-07-13 20:00:13,741 - INFO - Next nonce: 109051904
+2025-07-13 20:00:13,741 - INFO - Total shares found: 9
+2025-07-13 20:00:13,741 - INFO - Accepted shares: 0
+2025-07-13 20:00:14,742 - INFO - Cycle #27 (Nonce: 109051904)
+2025-07-13 20:00:14,742 - INFO - Fetching jobs...
+2025-07-13 20:00:22,699 - INFO - Stopping miner...

@@ -8,7 +8,7 @@
 #define THREADS_PER_BLOCK 256
 #define HEADER_SIZE 80
 #define TARGET_SIZE 32
-#define POOL_DATA_SIZE (4 + 32 + 32 + 44)
+#define POOL_DATA_SIZE (4 + 80 + 32)  // header_len(4) + header(80) + target(32)
 
 // Add error checking macro
 #define CUDA_CHECK(call) { \
@@ -101,17 +101,17 @@ __global__ void mine_kernel(uint8_t *all_data, uint32_t *results, uint64_t start
         int pool_offset = p * POOL_DATA_SIZE;
         
         uint32_t hdr_len = *((uint32_t*)&all_data[pool_offset]);
-        if(hdr_len != 32) continue;
+        if(hdr_len != 80) continue;  // Ravencoin headers are 80 bytes
         
-        memcpy(temp, &all_data[pool_offset + 4], 32);
+        memcpy(temp, &all_data[pool_offset + 4], 80);  // Copy full 80-byte header
         
-        // Insert nonce at RVN position
+        // Insert nonce at RVN position (bytes 76-79, little endian)
         temp[76] = (nonce >> 0) & 0xFF;
         temp[77] = (nonce >> 8) & 0xFF;
         temp[78] = (nonce >> 16) & 0xFF;
         temp[79] = (nonce >> 24) & 0xFF;
         
-        const uint8_t *target = &all_data[pool_offset + 36];
+        const uint8_t *target = &all_data[pool_offset + 4 + 80];  // After header_len + header
         
         sha256(temp, 80, hash1);
         sha256(hash1, 32, hash2);

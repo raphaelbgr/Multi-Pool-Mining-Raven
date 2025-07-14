@@ -42,7 +42,7 @@
       "name": "HeroMiners",
       "host": "br.ravencoin.herominers.com",
       "port": 1140,
-      "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Ashoka",
+      "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Ahsoka",
       "password": "x",
       "adapter": "stratum2",
       "extra": {
@@ -65,5 +65,5 @@
     }
   ],
   "max_pools": 32,
-  "nonce_increment": 262144
+  "nonce_increment": 4194304
 }

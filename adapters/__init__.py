@@ -1,11 +1,17 @@
 from .factory import AdapterFactory
 from .base import PoolAdapter
-from .stratum1 import Stratum1Adapter
-from .stratum2 import Stratum2Adapter
+from .pool_2miners import Pool2MinersAdapter
+from .pool_ravenminer import PoolRavenminerAdapter
+from .pool_woolypooly import PoolWoolyPoolyAdapter
+from .pool_herominers import PoolHeroMinersAdapter
+from .pool_nanopool import PoolNanopoolAdapter
 
 __all__ = [
     'AdapterFactory',
     'PoolAdapter',
-    'Stratum1Adapter',
-    'Stratum2Adapter'
+    'Pool2MinersAdapter',
+    'PoolRavenminerAdapter',
+    'PoolWoolyPoolyAdapter',
+    'PoolHeroMinersAdapter',
+    'PoolNanopoolAdapter'
 ]
