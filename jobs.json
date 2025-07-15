@@ -1,34 +1,34 @@
 [
   {
-    "pool_index": 2,
-    "pool_name": "WoolyPooly",
-    "job_id": "00003be2",
-    "header_hash": "7b0f00940d9138be5cd1a26c0e3899554f2a5ef15a372c932d86a952fa8c3869",
-    "target": "0000000500000000000000000000000000000000000000000000000000000000",
-    "ntime": "1b00f7ad"
-  },
-  {
     "pool_index": 1,
     "pool_name": "Ravenminer",
-    "job_id": "5735",
-    "header_hash": "fe39ed446619f7deccd40630548e7b75594fb29777080a185e1ceb4c68d4f7a6",
+    "job_id": "5c7d",
+    "header_hash": "0640f1567e84deae85c8ad75c208cc7cd55fb3d7b5606b2a32dc2bb4bd292f10",
     "target": "00000004fb000000000000000000000000000000000000000000000000000000",
-    "ntime": "1b00f7ad"
+    "ntime": "1b010266"
   },
   {
     "pool_index": 0,
     "pool_name": "2Miners",
-    "job_id": "46589",
-    "header_hash": "96016e8d3b4cee551c362626d4bba2931e4eb3f3f0bd15ecb0f4ef5caac2472d",
+    "job_id": "46cc1",
+    "header_hash": "969b10b5c17dbf92aaf6c231adc8eacdf2585edd4d1d637a1e661cd1f94d8d34",
     "target": "00000000ffff0000000000000000000000000000000000000000000000000000",
-    "ntime": "1b00f7ad"
+    "ntime": "1b010266"
   },
   {
     "pool_index": 3,
     "pool_name": "HeroMiners",
     "job_id": "0",
-    "header_hash": "a2aa4cdb8e37a512d847876c98f39f7a7e04061c7151699427b69b918a9b2d50",
+    "header_hash": "da35029c18f642c28cdddfb61f4869f12dc53b6b9c7eccd547d0cef4a5bff498",
     "target": "00000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffc",
-    "ntime": "1b00f7ad"
+    "ntime": "1b010266"
+  },
+  {
+    "pool_index": 2,
+    "pool_name": "WoolyPooly",
+    "job_id": "00004b9f",
+    "header_hash": "1c070b862d5a86a63884d4e7ce3408806a48aa5e8414e5535c83467aa6f67842",
+    "target": "0000000500000000000000000000000000000000000000000000000000000000",
+    "ntime": "1b010266"
   }
 ]

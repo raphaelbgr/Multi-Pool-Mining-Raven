@@ -241,13 +241,30 @@ class PoolAdapter(ABC):
 
 # Add share submission methods to each adapter
     def submit_share(self, job_id: str, nonce: str, extranonce1: str, extranonce2: str, header_hex: str) -> bool:
-        """Submit a share to the pool and return True if accepted"""
+        """Submit a share to the pool using T-Rex format and return True if accepted"""
         try:
-            # Create the submit message
+            # Extract solution (merkle_root) from header
+            # Header format: version(4) + prev_hash(32) + merkle_root(32) + ntime(4) + nbits(4) + nonce(4)
+            header_bytes = bytes.fromhex(header_hex)
+            if len(header_bytes) != 80:
+                logging.error(f"Invalid header length: {len(header_bytes)}")
+                return False
+            
+            # Extract merkle_root (bytes 36-68) - this is the solution
+            merkle_root = header_bytes[36:68][::-1].hex()  # Reverse for little-endian
+            
+            # Create the submit message in T-Rex format
             submit_msg = {
                 "id": 4,
                 "method": "mining.submit",
-                "params": [job_id, "worker", extranonce2, nonce, header_hex]
+                "params": [
+                    self.user,                    # username (1st parameter)
+                    job_id,                       # job_id (2nd parameter)
+                    f"0x{extranonce2}",          # extranonce2 (3rd parameter) - with 0x prefix
+                    f"0x{self.current_job.prev_hash}",  # prev_hash (4th parameter) - with 0x prefix
+                    f"0x{merkle_root}"           # solution/merkle_root (5th parameter) - with 0x prefix
+                ],
+                "worker": "worker1"
             }
             
             # Send the submit message
@@ -258,12 +275,13 @@ class PoolAdapter(ABC):
             logging.info(f"Share submission response from {self.name}: {response}")
             
             try:
-                result = json.loads(response)
-                if result.get("result") == True:
+                data = json.loads(response)
+                if data.get('result') == True:
                     logging.info(f"✅ Share ACCEPTED by {self.name}")
                     return True
                 else:
-                    logging.warning(f"❌ Share REJECTED by {self.name}: {result}")
+                    error = data.get('error', ['Unknown error'])
+                    logging.warning(f"❌ Share REJECTED by {self.name}: {error}")
                     return False
             except json.JSONDecodeError:
                 logging.error(f"Invalid JSON response from {self.name}: {response}")
@@ -801,37 +819,58 @@ class X16RAdapterMiner:
             return None
     
     def create_challenges_bin(self, jobs: List[Optional[MiningJob]]) -> bool:
-        """Create challenges.bin file for CUDA miner"""
+        """Create separate challenges.bin files for each pool"""
         try:
-            challenges = []
-            
-            for i, job in enumerate(jobs):
-                if job is None:
-                    continue
-                    
-                # Build header for this job
-                header = self.build_block_header(job, 0)
-                if header:
-                    challenges.append({
-                        'pool_index': i,
-                        'header': header,
-                        'target': job.target
-                    })
-            
-            if not challenges:
-                logger.warning("No challenges available, skipping cycle")
+            # Filter out None jobs
+            valid_jobs = [job for job in jobs if job is not None]
+            if not valid_jobs:
+                logging.warning("No valid jobs to create challenges")
                 return False
             
-            # Write challenges to file
-            with open('challenges.bin', 'wb') as f:
-                for challenge in challenges:
-                    f.write(challenge['header'])
+            # Group jobs by pool
+            pool_jobs = {}
+            for job in valid_jobs:
+                if job.pool_name not in pool_jobs:
+                    pool_jobs[job.pool_name] = []
+                pool_jobs[job.pool_name].append(job)
             
-            logger.info(f"Created challenges.bin with {len(challenges)} challenges")
-            return True
+            # Create separate header files for each pool
+            total_headers = 0
+            for pool_name, pool_job_list in pool_jobs.items():
+                try:
+                    headers = []
+                    for job in pool_job_list:
+                        try:
+                            # Build header for this job
+                            header = self.build_block_header(job, 0)  # Use nonce 0 for template
+                            if header:
+                                headers.append(header)
+                                logging.debug(f"Added header for {pool_name} job {job.job_id}")
+                        except Exception as e:
+                            logging.error(f"Error building header for {pool_name}: {e}")
+                    
+                    if headers:
+                        # Write headers to pool-specific file
+                        filename = f"challenges_{pool_name.lower().replace(' ', '_')}.bin"
+                        with open(filename, "wb") as f:
+                            for header in headers:
+                                f.write(header)
+                        
+                        logging.info(f"Created {filename} with {len(headers)} challenges for {pool_name}")
+                        total_headers += len(headers)
+                
+                except Exception as e:
+                    logging.error(f"Error creating challenges for {pool_name}: {e}")
+            
+            if total_headers > 0:
+                logging.info(f"Created {len(pool_jobs)} pool-specific challenge files with {total_headers} total challenges")
+                return True
+            else:
+                logging.error("No valid headers created for any pool")
+                return False
             
         except Exception as e:
-            logger.error(f"Failed to create challenges: {e}")
+            logging.error(f"Error creating challenges.bin: {e}")
             return False
     
     def run_cuda_mining_cycle(self) -> bool:
@@ -914,38 +953,92 @@ class X16RAdapterMiner:
         except Exception as e:
             logger.error(f"Mining error: {e}")
 
-def log_header_breakdown(header_bytes):
-    # Assumes header is 80 bytes
-    if len(header_bytes) != 80:
-        logging.warning(f"Header is not 80 bytes: {len(header_bytes)}")
-        return
-    version = header_bytes[0:4][::-1].hex()
-    prev_hash = header_bytes[4:36][::-1].hex()
-    merkle_root = header_bytes[36:68][::-1].hex()
-    ntime = header_bytes[68:72][::-1].hex()
-    nbits = header_bytes[72:76][::-1].hex()
-    nonce = header_bytes[76:80][::-1].hex()
-    logging.info(f"Header breakdown:")
-    logging.info(f"  version:     {version}")
-    logging.info(f"  prev_hash:   {prev_hash}")
-    logging.info(f"  merkle_root: {merkle_root}")
-    logging.info(f"  ntime:       {ntime}")
-    logging.info(f"  nbits:       {nbits}")
-    logging.info(f"  nonce:       {nonce}")
+# Add comprehensive diagnostic logging functions
+def log_share_diagnostics(job, header_bytes, nonce, extranonce1, extranonce2, pool_name):
+    """Log complete share submission diagnostics"""
+    logging.info(f"=== SHARE DIAGNOSTICS FOR {pool_name} ===")
+    
+    # Log all job fields
+    logging.info(f"Job ID: {job.job_id}")
+    logging.info(f"Prev Hash: {job.prev_hash}")
+    logging.info(f"Coinb1: {job.coinb1}")
+    logging.info(f"Coinb2: {job.coinb2}")
+    logging.info(f"Version: {job.version} (0x{job.version:08x})")
+    logging.info(f"Nbits: {job.nbits}")
+    logging.info(f"Ntime: {job.ntime}")
+    logging.info(f"Target: {job.target}")
+    logging.info(f"Merkle Branches: {job.merkle_branches}")
+    
+    # Log header breakdown
+    if len(header_bytes) == 80:
+        version = header_bytes[0:4][::-1].hex()
+        prev_hash = header_bytes[4:36][::-1].hex()
+        merkle_root = header_bytes[36:68][::-1].hex()
+        ntime = header_bytes[68:72][::-1].hex()
+        nbits = header_bytes[72:76][::-1].hex()
+        nonce_bytes = header_bytes[76:80][::-1].hex()
+        
+        logging.info(f"Header Breakdown:")
+        logging.info(f"  Version: {version}")
+        logging.info(f"  Prev Hash: {prev_hash}")
+        logging.info(f"  Merkle Root: {merkle_root}")
+        logging.info(f"  Ntime: {ntime}")
+        logging.info(f"  Nbits: {nbits}")
+        logging.info(f"  Nonce: {nonce_bytes}")
+    
+    # Log full header
+    logging.info(f"Full Header (80 bytes): {header_bytes.hex()}")
+    
+    # Log submission parameters
+    logging.info(f"Submission Parameters:")
+    logging.info(f"  Nonce: {nonce}")
+    logging.info(f"  Extranonce1: {extranonce1}")
+    logging.info(f"  Extranonce2: {extranonce2}")
+    
+    # Log what JSON-RPC message would be sent
+    submit_msg = {
+        "id": 4,
+        "method": "mining.submit",
+        "params": [job.job_id, extranonce2, job.ntime, nonce]
+    }
+    logging.info(f"JSON-RPC Message: {json.dumps(submit_msg)}")
+    
+    logging.info(f"=== END DIAGNOSTICS ===")
+
+def log_pool_comparison(pool_name, job, reference_data=None):
+    """Log comparison with reference miner data"""
+    logging.info(f"=== POOL COMPARISON: {pool_name} ===")
+    logging.info(f"Our Job Data:")
+    logging.info(f"  Job ID: {job.job_id}")
+    logging.info(f"  Prev Hash: {job.prev_hash}")
+    logging.info(f"  Version: {job.version}")
+    logging.info(f"  Nbits: {job.nbits}")
+    logging.info(f"  Ntime: {job.ntime}")
+    
+    if reference_data:
+        logging.info(f"Reference Miner Data:")
+        logging.info(f"  Job ID: {reference_data.get('job_id', 'N/A')}")
+        logging.info(f"  Prev Hash: {reference_data.get('prev_hash', 'N/A')}")
+        logging.info(f"  Version: {reference_data.get('version', 'N/A')}")
+        logging.info(f"  Nbits: {reference_data.get('nbits', 'N/A')}")
+        logging.info(f"  Ntime: {reference_data.get('ntime', 'N/A')}")
+    
+    logging.info(f"=== END COMPARISON ===")
 
 # --- Update test class to log all diagnostics ---
 class X16RAdapterMinerTest(X16RAdapterMiner):
-    """Test version that runs for limited cycles and submits real shares"""
+    """Test version that runs for limited cycles and submits real shares with full diagnostics"""
     
-    def __init__(self, max_cycles=10):
+    def __init__(self, max_cycles=5):
         self.max_cycles = max_cycles
         self.cycle_count = 0
         super().__init__()
     
     def run(self):
-        """Run for limited cycles with real share submission"""
+        """Run for limited cycles with real share submission and diagnostics"""
         logging.info(f"Starting TEST X16R Adapter Miner (max {self.max_cycles} cycles)")
         logging.info(f"Started at: {datetime.now()}")
+        logging.info("DIAGNOSTIC MODE: Will log all share details and submit to pools")
         
         try:
             while self.cycle_count < self.max_cycles:
@@ -959,82 +1052,185 @@ class X16RAdapterMinerTest(X16RAdapterMiner):
                         # Connect and authenticate first
                         if adapter.connect_and_subscribe() and adapter.authenticate():
                             job = adapter.get_job()
-                            if job and validate_job(job):
-                                jobs.append((i, job))
-                                logging.info(f"Valid job from {adapter.name}: {job.job_id}")
+                            if job:
+                                jobs.append((i, adapter, job))
+                                logging.info(f"Got job from {adapter.name}: {job.job_id}")
                             else:
-                                logging.warning(f"Invalid job from {adapter.name}, skipping")
+                                logging.warning(f"No job from {adapter.name}")
                         else:
                             logging.warning(f"Failed to connect/authenticate to {adapter.name}")
                     except Exception as e:
                         logging.error(f"Error getting job from {adapter.name}: {e}")
                 
                 if not jobs:
-                    logging.warning("No valid jobs available, skipping cycle")
+                    logging.warning("No jobs received, skipping cycle")
                     time.sleep(1)
                     continue
                 
-                # Create challenges for valid jobs
-                challenges = []
-                for pool_idx, job in jobs:
+                # For each job, create a test share and submit it
+                for pool_idx, adapter, job in jobs:
                     try:
-                        header = self.build_block_header(job, 0)
-                        if header:
-                            challenges.append((pool_idx, job, header))
-                            logging.info(f"Created challenge for {self.pool_adapters[pool_idx].name}")
+                        logging.info(f"Processing job {job.job_id} from {adapter.name}")
+                        
+                        # Build header (simulate what your miner does)
+                        header_bytes = self.build_test_header(job)
+                        
+                        # Create test nonce and extranonce
+                        test_nonce = "12345678"
+                        extranonce1 = adapter.extranonce1 if hasattr(adapter, 'extranonce1') else "00000000"
+                        extranonce2 = "00000000"
+                        
+                        # Log complete diagnostics
+                        log_share_diagnostics(job, header_bytes, test_nonce, extranonce1, extranonce2, adapter.name)
+                        
+                        # Submit the share to the pool
+                        logging.info(f"Submitting test share to {adapter.name}...")
+                        success = adapter.submit_share(job.job_id, test_nonce, extranonce1, extranonce2, header_bytes.hex())
+                        
+                        if success:
+                            logging.info(f"✅ Share accepted by {adapter.name}")
+                        else:
+                            logging.warning(f"❌ Share rejected by {adapter.name}")
+                            
                     except Exception as e:
-                        logging.error(f"Failed to build header for {self.pool_adapters[pool_idx].name}: {e}")
+                        logging.error(f"Error processing job from {adapter.name}: {e}")
                 
-                if not challenges:
-                    logging.warning("No challenges available, skipping cycle")
-                    time.sleep(1)
-                    continue
+                logging.info(f"Cycle {self.cycle_count} completed")
+                time.sleep(2)  # Wait between cycles
                 
-                # Write challenges to file
-                with open("challenges.bin", "wb") as f:
-                    f.write(struct.pack("<I", len(challenges)))
-                    for pool_idx, job, header in challenges:
-                        f.write(struct.pack("<I", pool_idx))
-                        f.write(header)
-                
-                logging.info(f"Created challenges.bin with {len(challenges)} challenges")
-                
-                # Simulate finding a share and submit it
-                for pool_idx, job, header in challenges:
-                    # Create a test share with nonce 0x12345678
-                    test_nonce = "12345678"
-                    header_bytes = bytearray(header)
-                    header_bytes[76:80] = struct.pack("<I", int(test_nonce, 16))  # Set nonce
-                    header_hex = header_bytes.hex()
-                    
-                    # Submit the share
-                    adapter = self.pool_adapters[pool_idx]
-                    success = adapter.submit_share(
-                        job_id=job.job_id,
-                        nonce=test_nonce,
-                        extranonce1="worker",
-                        extranonce2="00000000",
-                        header_hex=header_hex
-                    )
-                    
-                    if success:
-                        logging.info(f"✅ Share submitted successfully to {adapter.name}")
-                    else:
-                        logging.warning(f"❌ Share submission failed to {adapter.name}")
-                
-                logging.info("CUDA mining cycle completed (simulated)")
-                time.sleep(1)
-                logging.info("Cycle completed successfully")
-                time.sleep(1)
-            
-            logging.info(f"Test completed after {self.max_cycles} cycles")
-            
         except KeyboardInterrupt:
-            logging.info("Test stopped by user")
+            logging.info("Test miner stopped by user")
         except Exception as e:
-            logging.error(f"Error in test: {e}")
+            logging.error(f"Test miner error: {e}")
             import traceback
             traceback.print_exc()
+    
+    def build_test_header(self, job):
+        """Build a test header for diagnostics"""
+        try:
+            # Convert version to little-endian bytes
+            version_bytes = struct.pack('<I', job.version)
+            
+            # Convert prev_hash to little-endian bytes (reverse the hex string)
+            prev_hash_bytes = bytes.fromhex(job.prev_hash)[::-1]
+            
+            # Calculate merkle root (simplified - you'll need proper calculation)
+            coinbase = job.coinb1 + "00000000" + job.coinb2  # Add extranonce2
+            merkle_root = hashlib.sha256(hashlib.sha256(bytes.fromhex(coinbase)).digest()).digest()
+            
+            # Convert ntime to little-endian bytes
+            ntime_int = int(job.ntime, 16)
+            ntime_bytes = struct.pack('<I', ntime_int)
+            
+            # Convert nbits to little-endian bytes
+            nbits_int = int(job.nbits, 16)
+            nbits_bytes = struct.pack('<I', nbits_int)
+            
+            # Test nonce
+            nonce_bytes = struct.pack('<I', 0x12345678)
+            
+            # Build 80-byte header
+            header = version_bytes + prev_hash_bytes + merkle_root + ntime_bytes + nbits_bytes + nonce_bytes
+            
+            return header
+            
+        except Exception as e:
+            logging.error(f"Error building test header: {e}")
+            return b'\x00' * 80  # Return empty header on error
+
+def submit_known_valid_share():
+    """Test share submission format with current job data"""
+    import socket
+    import json
+    import time
+    logging.info("Testing share submission format with current job data...")
+    
+    # 2Miners connection info
+    host = "rvn.2miners.com"
+    port = 6060
+    user = "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU"
+    password = "x"
+    worker = "raphael-desktop"
+    
+    try:
+        # Connect to pool
+        s = socket.create_connection((host, port), timeout=10)
+        s.settimeout(30)
+        f = s.makefile("rw")
+        
+        # Subscribe
+        subscribe = {"id": 1, "method": "mining.subscribe", "params": ["t-rex/0.26.8"]}
+        s.send((json.dumps(subscribe) + "\n").encode())
+        resp = f.readline()
+        logging.info(f"Subscribe response: {resp.strip()}")
+        
+        # Authorize
+        authorize = {"id": 2, "method": "mining.authorize", "params": [user, password], "worker": worker}
+        s.send((json.dumps(authorize) + "\n").encode())
+        resp = f.readline()
+        logging.info(f"Authorize response: {resp.strip()}")
+        
+        # Wait for current job
+        job_data = None
+        for _ in range(5):
+            try:
+                line = f.readline()
+                if not line:
+                    break
+                logging.info(f"Pool message: {line.strip()}")
+                if "mining.notify" in line:
+                    # Parse the job data
+                    try:
+                        data = json.loads(line)
+                        if data.get("method") == "mining.notify":
+                            params = data.get("params", [])
+                            if len(params) >= 7:
+                                job_data = {
+                                    "job_id": params[0],
+                                    "prev_hash": params[1],
+                                    "coinb1": params[2],
+                                    "coinb2": params[3],
+                                    "version": params[5],
+                                    "nbits": params[6]
+                                }
+                                logging.info(f"Got current job: {job_data}")
+                                break
+                    except:
+                        pass
+            except Exception:
+                break
+        
+        if job_data:
+            # Submit a test share with current job data but fixed nonce
+            submit_msg = {
+                "id": 88181504,
+                "method": "mining.submit",
+                "params": [
+                    job_data["job_id"],
+                    "00000000",  # extranonce2
+                    "6875a2e0",  # ntime (current time)
+                    "12345678"   # test nonce
+                ],
+                "worker": worker
+            }
+            s.send((json.dumps(submit_msg) + "\n").encode())
+            logging.info(f"Submitted test share: {json.dumps(submit_msg)}")
+            
+            # Get the response
+            try:
+                resp = f.readline()
+                logging.info(f"Share submission response: {resp.strip()}")
+            except Exception as e:
+                logging.error(f"Timeout waiting for response: {e}")
+        else:
+            logging.error("No job data received")
+        
+        s.close()
+        
+    except Exception as e:
+        logging.error(f"Error testing share submission: {e}")
+        import traceback
+        traceback.print_exc()
 
 # --- Update main execution to use --test flag ---
 if __name__ == "__main__":
@@ -1042,10 +1238,18 @@ if __name__ == "__main__":
     try:
         cuda_miner_path = "x16r_miner.exe"
         test_mode = '--test' in sys.argv
-        if not os.path.exists(cuda_miner_path):
+        submit_known_share = '--submit-known-share' in sys.argv
+        
+        if submit_known_share:
+            print("Testing share submission format...")
+            submit_known_valid_share()
+            print("Share submission test completed.")
+            exit(0)  # Exit after testing
+        elif not os.path.exists(cuda_miner_path):
             print(f"Warning: CUDA miner '{cuda_miner_path}' not found")
             print("Running in test mode with simulated mining")
             test_mode = True
+            
         if test_mode:
             miner = X16RAdapterMinerTest(max_cycles=10)
             print("Test miner initialized successfully")

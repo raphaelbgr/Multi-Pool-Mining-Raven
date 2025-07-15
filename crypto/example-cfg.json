@@ -1,0 +1,12 @@
+{
+"algo" : "lyra2v3",
+"intensity": 19,
+"api-bind": "0.0.0.0:4068",
+"hwmonitor": true,
+"quiet" : false,
+"debug" : false,
+"protocol": false,
+"url" : "stratum+tcp://lyra2rev3.eu.nicehash.com:3373",
+"user" : "12fsRcScJtcqytZJE3NdSAKBLu52PqDzzR",
+"pass" : "x"
+}
