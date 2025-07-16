@@ -1,0 +1,31 @@
+{
+    "donate-level": 0,
+    "pools": [
+        {
+            "coin": "RVN",
+            "url": "rvn.2miners.com:6060",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN", 
+            "url": "stratum.ravenminer.com:3838",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Yoda",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN",
+            "url": "pool.br.woolypooly.com:55555", 
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Obiwan",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum2"
+        }
+    ],
+    "max_concurrent_pools": 5,
+    "enable_multi_pool_mining": true
+} 
