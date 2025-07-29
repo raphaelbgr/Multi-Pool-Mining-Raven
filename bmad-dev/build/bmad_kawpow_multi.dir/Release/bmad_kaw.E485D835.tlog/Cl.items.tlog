@@ -1,0 +1,10 @@
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_host.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_kawpow_host.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_pool_manager.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_pool_manager.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_memory_manager.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_memory_manager.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_algorithm.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_kawpow_algorithm.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_optimized.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_kawpow_optimized.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_gpu_memory_manager.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_gpu_memory_manager.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_performance_tester.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_performance_tester.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_xmrig_bridge.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_xmrig_bridge.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_share_converter.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_share_converter.obj
+C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_pool_connector.cpp;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.dir\Release\bmad_pool_connector.obj

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/cmake_install.cmake",
+		"C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,10 @@
+^C:\USERS\RBGNR\GIT\FORK-RAVEN-CUDA-MINDER\BMAD-DEV\BUILD\CMAKEFILES\C081D75BF638B489C5C8B8F6052DE783\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev -BC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/BMAD_MultiPool_KawPow.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

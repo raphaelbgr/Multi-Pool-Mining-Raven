@@ -1,0 +1,45 @@
+{
+    "bmad_config": {
+        "max_pools": 10,
+        "batch_size": 1024,
+        "memory_alignment": 4096,
+        "use_pinned_memory": true,
+        "enable_profiling": false
+    },
+    "cuda_config": {
+        "device_id": 0,
+        "blocks": 8192,
+        "threads": 32,
+        "intensity": 262144
+    },
+    "pools": [
+        {
+            "url": "stratum+tcp://pool1.example.com:3333",
+            "user": "your_wallet_address",
+            "password": "x",
+            "pool_id": 0,
+            "active": true
+        },
+        {
+            "url": "stratum+tcp://pool2.example.com:3333",
+            "user": "your_wallet_address",
+            "password": "x",
+            "pool_id": 1,
+            "active": true
+        }
+    ],
+    "mining_config": {
+        "algorithm": "kawpow",
+        "coin": "RVN",
+        "max_nonce_range": 16777216,
+        "share_timeout": 120,
+        "job_timeout": 300
+    },
+    "performance_config": {
+        "enable_multi_pool_mining": true,
+        "enable_adaptive_batching": true,
+        "enable_memory_optimization": true,
+        "enable_profiling": false,
+        "log_level": "info"
+    }
+}

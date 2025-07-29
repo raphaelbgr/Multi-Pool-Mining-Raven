@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\48c14f9b608b956830396513545f0c8f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{677F44B7-329F-3450-809F-DF1B4ABEF094}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

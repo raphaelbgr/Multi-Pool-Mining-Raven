@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_host.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_pool_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_memory_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_kawpow_optimized.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_gpu_memory_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_performance_tester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_xmrig_bridge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_share_converter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\src\bmad_pool_connector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{92514757-72A0-343C-9944-8169C97382F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

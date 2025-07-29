@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25AFD574-6E21-3919-A99B-B4D02C8B072D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev -BC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build --check-stamp-file C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeCXXCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeRCCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev -BC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build --check-stamp-file C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeCXXCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeRCCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev -BC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build --check-stamp-file C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeCXXCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeRCCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev -BC:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build --check-stamp-file C:/Users/rbgnr/git/Fork-Raven-Cuda-Minder/bmad-dev/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeCXXCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeRCCompiler.cmake;C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\4.1.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\ZERO_CHECK.vcxproj">
+      <Project>{AB8240DC-424B-390B-BF43-B809D3EE9093}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi.vcxproj">
+      <Project>{E485D835-9092-3BDB-B479-767E2674A90F}</Project>
+      <Name>bmad_kawpow_multi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\bmad_kawpow_multi_static.vcxproj">
+      <Project>{527BAD44-91B6-3E36-AFE9-64978315ABC0}</Project>
+      <Name>bmad_kawpow_multi_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test\bmad_test.vcxproj">
+      <Project>{3A0BF478-B309-3EC6-B1BE-75A5F80E176E}</Project>
+      <Name>bmad_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_bmad_integration.vcxproj">
+      <Project>{AFD6525C-D6DD-387B-BE26-D8832D2EABCD}</Project>
+      <Name>test_bmad_integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_comprehensive_suite.vcxproj">
+      <Project>{10421BB5-650D-3250-BDEB-C9886E0385DF}</Project>
+      <Name>test_comprehensive_suite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_different_jobs.vcxproj">
+      <Project>{7E04CBA0-22CB-3A4B-9399-80CB9EABF750}</Project>
+      <Name>test_different_jobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_gpu_memory.vcxproj">
+      <Project>{EF45CA26-05F1-3984-A1D4-B7C92A9410E5}</Project>
+      <Name>test_gpu_memory</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_multi_pool.vcxproj">
+      <Project>{E976E850-B86E-3558-AD0A-EF133E2064D5}</Project>
+      <Name>test_multi_pool</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_optimized_kernel.vcxproj">
+      <Project>{C70618A8-01B0-3DF9-8EA7-62D9930FFAE3}</Project>
+      <Name>test_optimized_kernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_performance.vcxproj">
+      <Project>{0AB68E4B-E674-335D-AC46-57DDA3FDFC2F}</Project>
+      <Name>test_performance</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_performance_tester.vcxproj">
+      <Project>{5B1E9E6A-2371-320D-BF4A-6A8E068989E6}</Project>
+      <Name>test_performance_tester</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_quick_check.vcxproj">
+      <Project>{F6B4ECCE-E817-3D1A-8CF1-2DEFC8B5A86C}</Project>
+      <Name>test_quick_check</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_mining.vcxproj">
+      <Project>{BEAC5B2D-75F2-38F5-9D83-47CC73AAF812}</Project>
+      <Name>test_real_mining</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_mining_actual_pools.vcxproj">
+      <Project>{96D2AAF1-49A9-31D7-BC9D-1DDECEBEF1A7}</Project>
+      <Name>test_real_mining_actual_pools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_mining_monitoring.vcxproj">
+      <Project>{4D08A55C-8FA2-33BE-847A-249ECD8054BC}</Project>
+      <Name>test_real_mining_monitoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_mining_xmrig.vcxproj">
+      <Project>{14F8F503-F273-35D3-9D02-AE313F8FBF63}</Project>
+      <Name>test_real_mining_xmrig</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_pools.vcxproj">
+      <Project>{5D85F5A8-862D-36BC-93DA-23E2FF69AB34}</Project>
+      <Name>test_real_pools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_real_ravencoin_pools.vcxproj">
+      <Project>{67206FA7-8EAF-3EEC-9F78-40979EE0B7F6}</Project>
+      <Name>test_real_ravencoin_pools</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\rbgnr\git\Fork-Raven-Cuda-Minder\bmad-dev\build\test_unit_components.vcxproj">
+      <Project>{E0A09EAB-A295-39D5-85AE-A5881E4E73A8}</Project>
+      <Name>test_unit_components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

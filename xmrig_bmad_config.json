@@ -1,0 +1,141 @@
+{
+    "donate-level": 0,
+    "pools": [
+        {
+            "coin": "RVN",
+            "url": "rvn.2miners.com:6060",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN", 
+            "url": "stratum.ravenminer.com:3838",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Yoda",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN",
+            "url": "pool.br.woolypooly.com:55555", 
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Obiwan",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum2"
+        },
+        {
+            "coin": "RVN",
+            "url": "br.ravencoin.herominers.com:1140",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Ahsoka",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum2"
+        },
+        {
+            "coin": "RVN",
+            "url": "rvn-us-east1.nanopool.org:10400",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Luke",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        }
+    ],
+    "max_concurrent_pools": 5,
+    "enable_multi_pool_mining": true,
+    "bmad_enabled": true,
+    "bmad_config": {
+        "device_id": 0,
+        "max_pools": 5,
+        "max_nonces": 100000,
+        "performance_multiplier": true,
+        "smart_job_assigner": true
+    },
+    "algo": "kawpow",
+    "coin": "RVN",
+    "background": false,
+    "colors": true,
+    "cpu": {
+        "enabled": false,
+        "huge-pages": true,
+        "hw-aes": null,
+        "priority": null,
+        "memory-pool": false,
+        "yield": true,
+        "max-threads-hint": 75,
+        "asm": true,
+        "argon2-impl": null,
+        "astrobwt-max-size": 550,
+        "cn/0": false,
+        "cn-lite/0": false
+    },
+    "opencl": false,
+    "cuda": {
+        "enabled": true,
+        "loader": null,
+        "adl": true,
+        "cn/0": false,
+        "cn-lite/0": false
+    },
+    "pools": [
+        {
+            "coin": "RVN",
+            "url": "rvn.2miners.com:6060",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN", 
+            "url": "stratum.ravenminer.com:3838",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Yoda",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        },
+        {
+            "coin": "RVN",
+            "url": "pool.br.woolypooly.com:55555", 
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Obiwan",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum2"
+        },
+        {
+            "coin": "RVN",
+            "url": "br.ravencoin.herominers.com:1140",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Ahsoka",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum2"
+        },
+        {
+            "coin": "RVN",
+            "url": "rvn-us-east1.nanopool.org:10400",
+            "user": "RGpVV4jjVhBvKYhT4kouUcndfr3VpwgxVU.Luke",
+            "pass": "x",
+            "enabled": true,
+            "adapter": "stratum1"
+        }
+    ],
+    "print-time": 60,
+    "health-print-time": 60,
+    "dmi": true,
+    "retries": 5,
+    "retry-pause": 5,
+    "syslog": false,
+    "tls": {
+        "enabled": false,
+        "protocols": null,
+        "cert": null,
+        "cert_key": null,
+        "ciphers": null,
+        "ciphersuites": null,
+        "dhparam": null
+    },
+    "user-agent": null,
+    "verbose": 0,
+    "watch": true
+}

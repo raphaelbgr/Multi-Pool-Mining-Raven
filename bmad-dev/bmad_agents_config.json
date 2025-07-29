@@ -1,0 +1,50 @@
+{
+    "bmad_agents": {
+        "kawpow_multi": {
+            "enabled": true,
+            "max_pools": 10,
+            "batch_size": 1024,
+            "memory_alignment": 4096,
+            "use_pinned_memory": true,
+            "enable_profiling": false
+        }
+    },
+    "cuda_config": {
+        "device_id": 0,
+        "blocks": 8192,
+        "threads": 32,
+        "intensity": 262144
+    },
+    "pool_agents": [
+        {
+            "name": "agent_0",
+            "pool_id": 0,
+            "enabled": true,
+            "priority": 1
+        },
+        {
+            "name": "agent_1", 
+            "pool_id": 1,
+            "enabled": true,
+            "priority": 2
+        },
+        {
+            "name": "agent_2",
+            "pool_id": 2,
+            "enabled": true,
+            "priority": 3
+        },
+        {
+            "name": "agent_3",
+            "pool_id": 3,
+            "enabled": true,
+            "priority": 4
+        },
+        {
+            "name": "agent_4",
+            "pool_id": 4,
+            "enabled": true,
+            "priority": 5
+        }
+    ]
+}

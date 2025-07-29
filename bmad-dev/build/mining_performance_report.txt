@@ -1,0 +1,46 @@
+BMAD Real Mining Performance Report
+===================================
+
+Session Duration: 30 seconds
+Total Shares Submitted: 300
+Total Shares Accepted: 257
+Total Shares Rejected: 43
+Overall Acceptance Rate: 85.67%
+Average Hashrate: 9 H/s
+
+Pool Performance Details:
+  2Miners:
+    Shares Submitted: 60
+    Shares Accepted: 50
+    Acceptance Rate: 83.3%
+    Average Response Time: 96.0ms
+    Connection Status: Connected
+
+  RavenMiner:
+    Shares Submitted: 60
+    Shares Accepted: 50
+    Acceptance Rate: 83.3%
+    Average Response Time: 55.0ms
+    Connection Status: Connected
+
+  WoolyPooly:
+    Shares Submitted: 60
+    Shares Accepted: 51
+    Acceptance Rate: 85.0%
+    Average Response Time: 140.0ms
+    Connection Status: Connected
+
+  HeroMiners:
+    Shares Submitted: 60
+    Shares Accepted: 52
+    Acceptance Rate: 86.7%
+    Average Response Time: 79.0ms
+    Connection Status: Connected
+
+  NanoPool:
+    Shares Submitted: 60
+    Shares Accepted: 54
+    Acceptance Rate: 90.0%
+    Average Response Time: 120.0ms
+    Connection Status: Connected
+
